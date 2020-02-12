@@ -1,0 +1,115 @@
+﻿<html>
+
+<head> 
+
+<title>Cadastro de Pacientes</title>
+</head>
+<style>
+		body{
+			background-image:url(fundo.jpg);
+			background-attachment:fixed;
+			background-size:100%;
+		
+		}
+	</style>
+
+	<body>
+		<h2>Cadastro de Pacientes</h2>
+		<hr>
+			<form
+			action = "gravarPaciente.php"
+			method = "post"
+			enctype = "multipart/form-data">
+		     
+			 Nome do Paciente:
+			 <input type="text" name="nome" id="nome" maxlength="90" size="25">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 CPF:
+			 <input type="text" name="cpf" id="cpf" maxlength="11" size="25" required><br>
+			 Data de Nascimento:
+			 <input type="date" name="nasc" id="nasc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 Casado:
+			 <input type="checkbox" name="cas" id="G4" value="1"><hr>
+			 Sexo:
+			 <input type="radio" name="sex" id="sex" value="Masculino"checked> Masculino
+			 <input type="radio" name="sex" id="sex" value="Feminino">Feminino<hr>
+
+			 Data de Cadastro:
+			 <input type="date" name="cad" id="cad">
+			 Convenio Odontológico:
+			 <input type="text" name="conv" id="conv" maxlength="20" list="ltconv" size="25">
+                <datalist  id="ltconv">
+				<option value="Green line">
+				<option value="Amil Odonto">
+				<option value="Santa Helena">
+				<option value="Unimed Odonto">
+				<option value="Unidonto">
+				<option value="Odonto Prev">
+				<option value="Protest Dental Plus">
+				<option value="Inter Odonto">
+				<option value="Met life">
+				</datalist>
+
+
+			 Profissao:
+			 <input type="text" name="prof" id="prof" maxlength="20" list="ltprof" size="25">
+			 <datalist  id="ltprof">
+				<option value="Advogado">
+				<option value="Médico">
+				<option value="Motorista">
+				<option value="Professor">
+				<option value="Programador">
+				<option value="Chefe de cozinha">
+				<option value="Empresário">
+				<option value="Faxineiro">
+				<option value="Garçon">
+			</datalist><hr>
+				
+			Endereço:
+			<input type="text" name="end" id="end" maxlength="99" size="45">
+			CEP:
+			<input type="text" name="cep" id="end" maxlength="8" size="15">
+            Número
+			<input type="text" name="num" id="num" maxlength="6" size="5">
+            Complemento 
+			<input type="text" name="comp" id="comp" maxlength="6" size="5"><br><br>
+            Cidade:
+			<input type="text" name="cid" id="cid" maxlength="30" list="ltcid" size="25">
+			 <datalist  id="ltcid">
+				<option value="São Paulo">
+				<option value="Sãnto André">
+				<option value="São Bernardo">
+				<option value="São Caetano">
+				<option value="Maua">
+				<option value="Ribeirão Pires">
+				<option value="Guarulhos">
+			</datalist>
+           Bairro:
+		   <input type="text" name="bair" id="bair" maxlength="30" size="15">
+		   Estado:
+		   <input type="text" name="est" id="est" maxlength="2" list="ltest" size="5"><br><br>
+		   	 <datalist  id="ltcid">
+				<option value="SP">
+				<option value="RJ">
+				<option value="MG">
+				<option value="GO">
+				<option value="BA">
+				<option value="RO">
+				<option value="ES">
+			</datalist>
+           Telefone:		   
+		   <input type="text" name="tel" id="tel" maxlength="11" size="25"><br><br>
+           Telefone celular:
+		   <input type="text" name="cel" id="cel" maxlength="11" size="25"><hr>
+		   Enviar Foto>
+		   <input type="file" name="fot">
+		   Observaces:
+           <textarea name="obs" style="width:800px; height:150px;">Obs:</textarea><hr>
+		   <input type="submit" value="Enviar">
+		   <input type="reset"  value="Limpar">
+		   <hr>
+		   <a href='Pa_Listagem.php'>Ir para Listagem de Pacientes</a>
+		   
+		   </form>
+
+
+</html>

@@ -1,0 +1,81 @@
+﻿<html>	
+	<head>
+	
+		<title>AGENDAMENTO</title>
+	</head>
+	<style>
+		body{
+			background-image:url(fundo.jpg);
+			background-attachment:fixed;
+			background-size:100%;
+		
+		}
+	</style>
+	
+	<body>
+		<h2>AGENDAMENTO</h2>
+		<form 	action="gravarAgendamento.php"
+				method="post"
+				enctype="multipart/form-data">
+				
+			Paciente:
+			<input 	type="text" name="paciente"
+					id="paciente" maxlength="80"
+					list="pac"
+					size="80"> <br><br>
+					<datalist id="pac">
+				<option value="João de Jesus Santos">
+				<option value="Maria Robenita Ferreira">
+				<option value="José Paulo Fernandes">
+			</datalist>
+				
+			Especialidade
+			<input 	type="text" name="espe"
+					id="espe" maxlength="20"
+					list="especialidade"
+					size="20"> <br><br>
+			
+			<datalist id="especialidade">
+				<option value="Opcespec">
+				<option value="Endodontia">
+				<option value="Ortodontia">
+				<option value="Implantodontia">
+				<option value="Dentística">
+				<option value="Estomatologia">
+				<option value="ontoprdiatria">
+				<option value="Radiologia Odontológica">
+			</datalist>
+			
+			Nome do Medico
+			<input 	type="text" name="medico"
+					id="medico" maxlength="80"
+					list="nomeMedico"
+					required
+					size="80"> <br><br>
+			
+			<datalist id="nomeMedico">
+				<option value="Maria Aparecida">
+				<option value="Vinicius silva santos">
+				<option value="Pedro João Thorres">
+				<option value="Thomas Danilos de Jesus">
+				<option value="wagner Silva Santos">
+			</datalist>
+			
+			Data :
+			<input  type="date" name="data" id="data">
+			Horário:
+			<input type="time" name="hora" id="hora"> <br><br>
+			
+			<input 	type="checkbox" name="confirmado"
+					id="confirmado" value="1">Confirmado<br>
+			
+			<br>
+			<input type="submit" value="Incluir">
+			<input type="reset" value="Limpar Dados">	
+			<br><br>
+			<td><a href='listaAgendameto.php'>Lista Dos Agendamentos</a></td>
+			
+			
+		</form>
+	</body>
+</html>

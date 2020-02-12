@@ -1,0 +1,95 @@
+﻿<html>
+<head>
+
+<title> CADASTRO DE ESPECIALIDADE</title>
+
+</head>
+<style>
+		body{
+			background-image:url(fundo.jpg);
+			background-attachment:fixed;
+			background-size:100%;
+		
+		}
+	</style>
+<h2>CADASTRO DE ESPECIALIDADE</h2>
+<body>
+<form action="gravarEspecialidade.php"
+		method="post"
+		enctype="multipart/form-data" >
+
+Especialidade:
+	<input type="text"
+	name="especialidade"
+	id="especialidade" 
+	list="opcespec"
+	maxlength="30"
+	size="30"> <br><br>
+	
+	<datalist id="opcespec">
+	<option value="Endodontia">
+	<option value="Periodontia">
+	<option value="Ortodontia">
+	<option value="Implantodontia">
+	<option value="Dentística">
+	<option value="Estomatologia">
+	<option value="Odontopediatria">
+	<option value="Radiologia Odontológica">
+	</datalist>
+	
+Tratamento:
+				<select name="tratamento" id="tratamento">
+				<option value="Remoção Polpa Dentária" selected>1-Remoção Polpa Dentária</option>
+				<option value="Pigmentação Da Gengiva">2-Pigmentação Da Gengiva</option>
+				<option value="Aparelho Dentário">3-Aparelho Dentário</option>
+				<option value="Implante Dentário">4-Implante Dentário</option>
+				<option value="Restauração Dentária">5-Restauração Dentária</option>
+				<option value="Prevenção Dentária">6-Prevenção Dentária</option>
+				<option value="Prevenção">7-Prevenção</option>
+				<option value="Raio-X">8-Raio-X</option>
+			</select><br><br>
+	
+Valor R$:
+	<input type="number"
+	name="valor"
+	id="valor"
+	list="valoresEspc"
+	min="0"
+	max="1000"> <br><br>
+	
+	<datalist id="valoresEspc">
+	<option value="100">
+	<option value="200">
+	<option value="300">
+	<option value="400">
+	<option value="500">
+	</datalist>
+	
+	<input	type="checkbox" name="ativo"
+			id="ativo" value="1"> Ativo <br><br>
+	
+	
+Descrição:
+	<textarea
+	name="descricao"
+	id="descricao"
+	maxlength="500"
+	size="500"
+	cols='70' rows='10' >
+	</textarea> <br><br>
+	
+Data de Inclusão:
+	<input type="date"
+	name="data"
+	id="data"><br><br>
+Ícone:
+	<input	type="file" name="icone"><br><hr>
+	
+	<input type="button" value="Voltar" onClick="history.go(-1)">
+	<input type="submit" value="Cadastrar">
+	<input type="reset" value="Limpar">
+	<hr>
+<a href="listagem.php">Listagem das Especialidades</a>
+	
+</body>
+</html>

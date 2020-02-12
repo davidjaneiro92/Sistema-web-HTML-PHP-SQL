@@ -1,0 +1,77 @@
+﻿<html>
+	<head>
+		<title>Cadastro do Funcionário</title>
+	</head>
+	<style>
+		body{
+			background-image:url(fundo.jpg);
+			background-attachment:fixed;
+			background-size:100%;
+		
+		}
+	</style>
+	
+	
+	<body>
+	<h2>Cadastro Funcionário</h2>
+	<form	action="gravarFuncio.php"
+			method="POST"
+			enctype="multipart/form-data">
+
+	
+	Nome Completo<br>
+	<input type="text" name="nome" id="nome" maxlength="40" size="40"><br>
+	Favor informar o nome completo sem abreviações.<br><br>
+	
+	Informe seu CPF<br>
+	<input	type="text" name="cpf" id="cpf" maxlength="14" size="14" 
+			placeholder="XXX.XXX.XXX.XX"><br>Por gentileza utilizar ponto.<br><br>
+
+	E-mail<br>
+	<input type="text" name="email" id="E-mail" maxlength="80" size="80"><br>
+	
+	Telefone<br>
+	<input type="tel" name="telefone" id="Telefone" maxlength="11" size="11" placeholder="DD-Número"><br><br>
+	
+
+	Sexo<br>
+	<input type="radio" name="sexo" id="sexo" value="M">Masculino
+	<input type="radio" name="sexo" id="sexo"value="F">Feminino<br><br>
+	
+	Data de Nascimento<br>
+	<input type="date" name="data" id="date"><br><br>
+
+
+	UF<br>
+	<select name="uf" id="uf">
+		<option value="AC" selected>AC</option>	<option value="AL">AL</option> <option value="AP">AP</option>
+		<option value="AM">AM</option>  <option value="BA">BA</option>	<option value="CE"></option>
+		<option value="DF">DF</option>	<option value="ES">ES</option>	<option value="GO">GO</option>
+		<option value="MA">MA</option>	<option value="MT">MT</option>	<option value="MS">MS</option>
+		<option value="MG">MG</option>	<option value="PA">PA</option>	<option value="PB">PB</option>
+		<option value="PR">PR</option>	<option value="PE">PE</option> <option value="PI">PI</option>
+		<option value="RJ">RJ</option>	<option value="RN">RN</option>	<option value="RS">RS</option>
+		<option value="RO">RO</option> <option value="RR">RR</option>	<option value="SC">SC</option>
+		<option value="SP">SP</option>	<option value="SE">SE</option>	<option value="TO">TO</option>	
+	</select><br><br>
+	
+	Cidade<br>
+	<input type="text" name="cidade" id="cidade" maxlength="40" size="40"placeholder="Informar nome completo da cidade"><br><br>
+	
+	Escolaridade<br>
+	<input type="text" name="escolaridade" id="escolaridade" maxlength="40" size="40" placeholder="Informar escolaridade"><br><br>
+	
+	Curso Superior/Cursando<br>
+	<input type="text" name="curso" id="curso" maxlength="30" size="30" placeholder="Se tiver, qual está cursando / formação ."><br><br>
+	
+	Árera de Interesse<br>
+	<textarea name="areainteresse" id="areainteresse"
+					rows="5" cols="80"></textarea>
+			<hr>
+	
+	<input type="submit" value="Cadastrar">
+	<input type="reset" value="Limpar dados">
+	
+		</form>
+	</body>
+</html>
