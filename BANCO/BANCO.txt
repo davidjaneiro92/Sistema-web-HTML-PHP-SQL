@@ -1,0 +1,100 @@
+STRINGS SQL:
+
+
+create database clinica;
+
+use clinica;
+
+create table especialidade(
+ID int auto_increment primary key,
+Especialidade varchar(30),
+Tratamento varchar(30),
+Valor int(10),
+Ativo boolean,
+Descricao varchar(500),
+Data date,
+Icone varchar(100)
+);
+
+create table cadAgd(
+id 		INT AUTO_INCREMENT PRIMARY KEY,
+Paciente varchar(80),
+Especialidade   VARCHAR(80) ,
+Medico varchar(80),
+Data DATE,
+Hora    time,
+Confirmado boolean
+);
+
+
+CREATE TABLE financeiro ( 
+
+id   INT AUTO_INCREMENT PRIMARY KEY, 
+Nome	  varchar(30),
+Atendimento	 varchar(30),
+Valor		 Int ,
+Pagamento	 varchar(30),
+Data	 date,
+Pago	 boolean);
+
+CREATE TABLE funcionario(
+	id   		int       auto_increment primary key ,
+	nome             varchar(40) ,
+	cpf              varchar(14) ,  
+	email            varchar(80) ,
+	telefone         varchar(11) , 
+	sexo             char(2) ,    
+	datanasc         date ,
+	uf 		 char(2), 
+	cidade           varchar(50),
+	escolaridade	 varchar(40),
+	curso 		 varchar(30),	
+	areainteresse    varchar(100) 
+
+);
+
+create table paciente(
+iDpaciente            INT  AUTO_INCREMENT PRIMARY KEY ,
+nome                  VARCHAR (70),
+cpf                   VARCHAR (11),
+nascimento               DATE     ,
+casado                BOOLEAN     , 
+Sexo		          VARCHAR (10),	
+dataRegistro             DATE     ,
+convenio              VARCHAR (20),
+profissao             VARCHAR (20),
+endereco              VARCHAR (99),
+cep                       INT  (8),
+numero                VARCHAR  (6),
+complemento           VARCHAR  (6),
+cidade                VARCHAR (30),
+bairro                VARCHAR (30),
+estado                VARCHAR  (2),
+telefone              VARCHAR (11),
+telefone_celular      VARCHAR (11),
+arquivo               VARCHAR (99),
+obs                      TEXT
+);
+
+CREATE TABLE Doutor (
+id INT 			 AUTO_INCREMENT PRIMARY KEY,
+nome 			 VARCHAR (50),
+datanascimento 		 DATE        ,
+cro 			 VARCHAR (80),
+nomeDaMãe 		 VARCHAR (50),
+nomeDoPai 		 VARCHAR (50),
+endereço 		 VARCHAR (50),
+bairro 			 VARCHAR (30),
+cidade 			 VARCHAR (30),
+estado 			 VARCHAR (30),
+cep  			 INT     (9) ,
+telefone1 		 INT     (13),
+telefone2 		 INT     (13),
+celular 		 INT     (13),
+email 			 VARCHAR (80),
+rg 			 INT     (10),
+cpf  			 INT     (20)
+);
+
+
+
